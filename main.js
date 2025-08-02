@@ -13,3 +13,10 @@ function clearBadge() {
     console.warn("Badging APIはこのブラウザではサポートされていません。");
   }
 }
+
+async function requestNotificationPermission() {
+    const permission = await Notification.requestPermission();
+    if (permission === 'granted') {
+      // You can now use the Badging API
+    }
+  }
