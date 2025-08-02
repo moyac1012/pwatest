@@ -8,12 +8,11 @@
 </head>
 <body>
   <h1>PWA バッジ表示テスト</h1>
-  <button onclick="setBadge()">バッジ「1」を表示</button>
+  <button onclick="incBadge()">バッジを1増やす</button>
+  <button onclick="decBadge()">バッジを1減らす</button>
   <button onclick="clearBadge()">バッジを消す</button>
 
-  <button onclick="requestNotificationPermission()">
-  Request notifications permission
-</button>
+  <button onclick="requestNotificationPermission()">通知の許可ボタン</button>
 
   <script src="main.js"></script>
 </body>

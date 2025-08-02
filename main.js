@@ -1,6 +1,18 @@
-function setBadge() {
+let cnt = 0;
+
+function incBadge() {
+  cnt++;
+  setBadge(cnt);
+}
+
+function decBadge() {
+  cnt--;
+  setBadge(cnt);
+}
+
+function  setBadge(num) {
   if (navigator.setAppBadge) {
-    navigator.setAppBadge(1).catch(err => console.error("バッジ設定エラー:", err));
+    navigator.setAppBadge(num).catch(err => console.error("バッジ設定エラー:", err));
   } else {
     console.warn("Badging APIはこのブラウザではサポートされていません。");
   }
